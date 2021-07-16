@@ -265,7 +265,7 @@ table em{
 	display: flex;
 	flex-direction:column;
 	align-items: center;
-	justify-content: flex-start;
+	justify-content: center;
 	padding-bottom: 30px;
 }
 .blockstija{
@@ -280,17 +280,20 @@ table em{
 	text-align: center;
 	font-family: Bad Script;
 	letter-spacing: 3px;
-	line-height: 21px;
+	line-height: 1.8;
 	font-size: 18px;
 	color: #E0B5D8;
 }
-
+.image-verse{
+  height: 215px;
+	overflow: hidden;
+	padding: 0 15px 20px 15px;
+	margin: 0 auto;
+}
 .flexstija div img{
-	padding-bottom: 20px;
-	max-width: 100%;
+	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	box-shadow: -19px 0 22px -19px #000;
 }
 .button{
 	display: inline-block;
@@ -344,8 +347,11 @@ pre {
 	padding-top: 20px;
 }
 .horizont {
-	color: #644c1e;
-	size: 5;
+	margin: 20px 0;
+	padding: 0;
+	height: 0;
+	border: none;
+	border-top: 5px solid #644c1e;
 }
 
 /*galery*/
@@ -467,7 +473,17 @@ pre {
 		grid-template-columns: repeat(1, 1fr);
 		grid-row-gap: 5px;
 		grid-column-gap: 5px;
+    margin: 0;
 	}
+.card {
+	margin: 20px;
+}
+.img-stih{
+  margin-top: 20px;
+}
+.text-up{
+  top: 10%;
+}
 	.footer {
 		min-height: 90px;
 	}
