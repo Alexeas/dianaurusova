@@ -12,6 +12,21 @@ body {
 	line-height: 1.6;
 	overflow-x: hidden;
 }
+*::-webkit-scrollbar,
+html *::-webkit-scrollbar {
+  height: 12px;
+  width: 12px;
+}
+*::-webkit-scrollbar-track,
+html *::-webkit-scrollbar-track {
+  background: rgb(8, 37, 104, 0.8);;
+}
+*::-webkit-scrollbar-thumb,
+html *::-webkit-scrollbar-thumb {
+  background-color: #BEE66D;
+  border-radius: 5px;
+  border: 3px solid rgb(8, 37, 104, 0.8);
+}
 hr {
 	border: 0;
 	padding: 0;
@@ -127,7 +142,6 @@ table {
 .bgmenu:hover{
 	color:#BF8830;
 	}
-
 .current {
     position: relative;
     display: block;
@@ -141,6 +155,8 @@ table {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 2;
+		max-height: 350px;
+		overflow: auto;
 }
 .back a {
     color: #BEE66D;
@@ -172,9 +188,11 @@ table {
 	justify-items: center;
 	align-items: flex-flex-start;
 	justify-content: space-evenly;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	grid-column-gap: 10px;
 	grid-row-gap: 10px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 .card {
 	position: relative;
@@ -190,7 +208,7 @@ table {
 .text-down {
 	width: 100%;
 	position: absolute;
-  bottom: 25%;
+  bottom: 20%;
 	text-align: center;
 }
 .img-stih{
@@ -266,10 +284,10 @@ table em{
 	flex-direction:column;
 	align-items: center;
 	justify-content: center;
-	padding-bottom: 30px;
+	padding-bottom: 50px;
 }
 .blockstija{
-	padding-top: 25px;
+	padding-top: 50px;
 	font-family: Bad Script;
 	margin: 0 auto;
 	text-align: center;
@@ -287,7 +305,7 @@ table em{
 .image-verse{
   height: 215px;
 	overflow: hidden;
-	padding: 0 15px 20px 15px;
+	padding: 0 15px 30px 15px;
 	margin: 0 auto;
 }
 .flexstija div img{
@@ -306,7 +324,7 @@ table em{
   border-color: #DC9FCA #000 #3A112E;
   border-radius: 6px;
   background: linear-gradient(#DD6AC8, #7A1366) #7A1366;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 a.button:hover {
 	background: linear-gradient(#DD89CD, #BC3AA3) #BC3AA3;
@@ -315,58 +333,84 @@ a.button:hover {
 a.button:active {
 	background: linear-gradient(#762166, #ba7fa2) #762166;
 }
-
 pre {
 	width: auto;
-	padding: 20px 0;
+	padding-bottom: 30px;
 	margin: 0;
 	font-size: 12px;
 	line-height: 20px;
 	white-space:pre-wrap;
 }
-
+.flexbutton{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+  justify-content: space-around;
+}
+.arrowleft{
+	margin-right: 30px;
+}
+.arrowright{
+	margin-left: 30px;
+}
+.arrowleft:hover{
+	opacity: 0.6;
+	transition: 0.3s;
+}
+.arrowright:hover{
+	opacity: 0.6;
+	transition: 0.3s;
+}
+.flexbutton a img{
+	width: 52px;
+	height: 52px;
+}
 /*BLOG*/
 .flex-content-text {
-	padding: 40px;
+	padding: 50px 15px;
 	display: flex;
 	flex-direction: column;
   flex: 0 0 auto;
 	align-items: center;
 	justify-content: center;
 }
-
 .article {
 	text-align: center;
-	padding: 30px;
+	padding: 50px 15px;
+}
+.text-article{
+	margin-bottom: 10px;
+}
+.article em {
+  color: #20B2AA;
 }
 .article img {
 	max-width: 100%;
-}
-
-.audio {
 	padding-top: 20px;
 }
+.audio {
+	padding-top: 20px;
+	max-width: 100%;
+}
 .horizont {
-	margin: 20px 0;
+	margin: 0;
 	padding: 0;
 	height: 0;
 	border: none;
 	border-top: 5px solid #644c1e;
 }
-
 /*galery*/
 .grid-content-galery {
-	width: 100%;
 	display: grid;
 	justify-items: center;
 	justify-content: space-evenly;
 	grid-template-columns: repeat(3, 1fr);
-	grid-column-gap: 10px;
-	grid-row-gap: 10px;
-	padding-top: 30px
+	grid-column-gap: 15px;
+	grid-row-gap: 15px;
+	padding: 50px 15px;
 }
 .galery-img{
-	height: 215px;
+	height: 100%;
 	overflow: hidden;
 	margin: 0 0 20px 0;
 }
@@ -453,6 +497,16 @@ pre {
 }
 
 /*media*/
+@media (max-width: 1100px){
+  .grid-content {
+		 grid-template-columns: repeat(2, 1fr);
+  }
+	.grid-content-galery {
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-gap: 15px;
+		grid-row-gap: 15px;
+	}
+}
 @media (max-width: 767px){
 	body {
 		font-size: 14px;
@@ -476,7 +530,7 @@ pre {
     margin: 0;
 	}
 .card {
-	margin: 20px;
+	margin: 25px;
 }
 .img-stih{
   margin-top: 20px;
@@ -501,6 +555,11 @@ pre {
 	.current {
 		display: none;
 	}
+	.grid-content-galery {
+		grid-template-columns: repeat(1, 1fr);
+		grid-column-gap: 0;
+		grid-row-gap: 15px;
+	}
 
 /*burger*/
 	nav {
@@ -513,7 +572,6 @@ pre {
         width: 30px; /* размеры блока */
         height: 20px;
         display: block;
-        margin-left: 10px;
     }
 		.menu-burger__header span {
 			position: absolute;
