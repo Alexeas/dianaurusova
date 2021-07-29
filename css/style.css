@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-/*Bad Script*/
-@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital@0;1&family=Forum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
 
 body {
 	background: url(../images/bg-body.jpg) repeat left top;
 	color: #cfe91d;
-	font-family: Vollkorn;
+	font-family: Cormorant;
 	font-size: 16px;
 	padding: 0;
 	margin: 0;
@@ -52,7 +51,7 @@ h1,h2,h3,h4,h5,h6{
 	color: #D7F970;
 }
 h2, h3 {
-	-webkit-text-stroke: 0.75px black;
+	-webkit-text-stroke: 0.3px black;
 }
 img {
 	border: 0;
@@ -70,7 +69,8 @@ table {
 
 /*menu style*/
 .menu {
-	background: url(../images/bg-header.png) left top;
+	/*background: radial-gradient(#1b2082, #0e0314);*/
+	background: url(../images/bg.png) left top;
 	background-repeat: repeat-x;
 	border-top: 0px solid black;
 	display: flex;
@@ -177,7 +177,7 @@ table {
 /*body style*/
 
 .content {
-	background: url(../images/bg-content.png) repeat left top;
+	background: url(../images/bg.png) repeat left top;
 	border-bottom: 5px solid #5f233a;
 	width: 100%;
 	margin: 0;
@@ -201,20 +201,28 @@ table {
 .text-up{
 	width: 100%;
 	position: absolute;
-  top: 5%;
+  top: 0%;
 	text-align: center;
 	z-index: 1;
+	background-color: rgb(31, 4, 48, 0.7);
+}
+.text-up h2, .text-down h3{
+	color: #d5c1e3;
+	letter-spacing: 1px;
 }
 .text-down {
 	width: 100%;
+	color: #051226;
 	position: absolute;
-  bottom: 20%;
+  bottom: 0%;
 	text-align: center;
+	background-color: rgb(31, 4, 48, 0.7);
 }
 .img-stih{
 	height: 215px;
 	overflow: hidden;
 	margin: 0 0 20px 0;
+	position: relative;
 }
 .img-stih img {
 	width: 100%;
@@ -233,7 +241,7 @@ table {
 .readthis {
 	color: #9b516d;
 	display: block;
-	font-size: 16px;
+	font-size: 18px;
 	letter-spacing: 1px;
 	line-height: 30px;
 	width: 100%;
@@ -285,6 +293,8 @@ table em{
 	align-items: center;
 	justify-content: center;
 	padding-bottom: 50px;
+	background-color: rgb(31, 4, 48, 0.6);
+	/*background-color: rgb(31, 4, 48, 0.6);*/
 }
 .blockstija{
 	padding-top: 50px;
@@ -296,7 +306,7 @@ table em{
 
 .textstija{
 	text-align: center;
-	font-family: Bad Script;
+	font-family: Forum;
 	letter-spacing: 3px;
 	line-height: 1.8;
 	font-size: 18px;
@@ -534,9 +544,6 @@ pre {
 }
 .img-stih{
   margin-top: 20px;
-}
-.text-up{
-  top: 10%;
 }
 	.footer {
 		min-height: 90px;
