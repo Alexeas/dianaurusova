@@ -545,6 +545,12 @@ pre {
 .img-stih{
   margin-top: 20px;
 }
+.readthis {
+	color: #e16d99;
+}
+.readthis:hover {
+	color: #9b516d;
+}
 	.footer {
 		min-height: 90px;
 	}
