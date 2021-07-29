@@ -207,8 +207,8 @@ table {
 	background-color: rgb(31, 4, 48, 0.7);
 }
 .text-up h2, .text-down h3{
-	color: #d5c1e3;
-	letter-spacing: 1px;
+	color: #ded5e3;
+	letter-spacing: 1.5px;
 }
 .text-down {
 	width: 100%;
