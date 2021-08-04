@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital@0;1&family=Forum&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
 body {
 	background: url(../images/bg-body.jpg) repeat left top;
 	color: #cfe91d;
@@ -80,15 +80,38 @@ table {
 	color: #B9B9B9;
 	font-size: 20px;
 	text-decoration-line: underline;
-	text-shadow: 1px 1px 3em #DBDBDB;
 }
 
 .menu a:hover {
 	color: #DBDBDB;
-	font-size: 20px;
-	text-shadow: 0 0 1em #CACACA;
   transition: .3s ease-out;
   transition-delay: 0.2s;
+}
+
+.namelogo a{
+	font-family: Cinzel;
+	font-size: 40px;
+	text-decoration: none;
+	text-shadow: 2px 2px black;
+	color: #C0F73E;
+}
+.namelogo a:hover{
+	color: #C0F73E;
+	font-size: 40px;
+	text-shadow: 2px 2px black;
+  transition: none;
+  transition-delay: none;
+}
+.logo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.logo div:last-child a{
+	font-family: Cinzel;
+	font-size: 25px;
+	text-decoration: none;
+	text-shadow: 2px 2px black;
 }
 /*burger*/
 .menu-burger__header{
@@ -527,7 +550,11 @@ pre {
 	}
 	.about, .contacts{
 		width: 0;
-		visibility: hidden;
+		display: none;
+	}
+	.logo {
+	  justify-content: center;
+		align-items: center;
 	}
 	.logo img {
 		max-width: 300px;
@@ -582,6 +609,9 @@ pre {
 		background: url(../images/bg-body.jpg) repeat left top;
 		position:sticky;
 		z-index: 50;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	.menu-burger__header {
         position: relative; /* относительное позиционирование */
@@ -591,7 +621,7 @@ pre {
     }
 		.menu-burger__header span {
 			position: absolute;
-		  background-color: #C0F73E;
+		  background-color: #CFF76F;
 			left: 0;
 			width: 100%;
 			height: 2px;
@@ -602,7 +632,7 @@ pre {
 		.menu-burger__header::after{
 			position: absolute;
 			content: "";
-			background-color: #C0F73E;
+			background-color: #CFF76F;
 			width: 100%;
 			height: 2px;
 			left: 0;
@@ -646,7 +676,6 @@ pre {
 				 line-height: 4;
 				 padding: 0;
 				 margin: 0;
-				 /*overflow: auto;*/
 			}
 			.mobile-menu__header.active li{
 				  weight: 100%;
